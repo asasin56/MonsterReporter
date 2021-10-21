@@ -6,37 +6,38 @@ namespace Player
 {
     public class ReporterCamera : MonoBehaviour
     {
-        [SerializeField] private Transform _centre; 
         [SerializeField] private KeyButton _key;
         [SerializeField] private KeyButton _outKey;
-        [SerializeField] private float _radius;
         public event Action Using;
         
         private bool _isPlaying;
         [SerializeField] private Reportage _repotage;
+        public event Action StopUsing; 
 
         private void Start()
         {
             _key.Inputting += () =>
             { 
                 _isPlaying = true;
+                Using?.Invoke();
             } ;
             _outKey.Inputting += () =>
             {
                 _isPlaying = false; 
+                StopUsing?.Invoke();
             };
         }
+        
 
-        private void FixedUpdate() => Play();
-
-        public void Play()
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            if(!_isPlaying)
-                return;
-            Using?.Invoke();
-            Collider2D collider = Physics2D.OverlapCircle(_centre.position, _radius);
-            _repotage.AddMaterial(collider);
+            if (other.TryGetComponent(out Intersting intersting) && _isPlaying)
+            {
+                _repotage.AddMaterial(intersting);
+            }
         }
 
+
     }
+    
 }

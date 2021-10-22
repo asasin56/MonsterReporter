@@ -8,8 +8,8 @@ namespace Player
 {
     public class Reportage  : MonoBehaviour
     {
+        [SerializeField] private Purse _purse; 
         [SerializeField] private TextMeshProUGUI _moneyField;
-        private float _earnedMoney;
         private List<Intersting> _interstings = new List<Intersting>(15);
         
 
@@ -21,10 +21,10 @@ namespace Player
                     return;
             }
             _interstings.Add(intersting);
-            _earnedMoney += intersting.Cost;
+            _purse.Coins += intersting.Cost;
             DisplayMoney();
         }
 
-         private void DisplayMoney() => _moneyField.text = _earnedMoney.ToString(CultureInfo.InvariantCulture);
+         private void DisplayMoney() => _moneyField.text = _purse.Coins.ToString(CultureInfo.InvariantCulture);
     }
 }

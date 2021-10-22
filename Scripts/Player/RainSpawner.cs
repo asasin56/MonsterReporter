@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class RainSpawner : MonoBehaviour
+public class RainSpawner : Dangerous
 {
     [SerializeField] private List<RainedObject> _templates;
 
@@ -18,7 +18,7 @@ public class RainSpawner : MonoBehaviour
 
     private void OnEnable() => StartCoroutine(CreateRain());
 
-    public void Init()
+    public override void Init()
     {
         _isActive = true;
     }
@@ -34,7 +34,7 @@ public class RainSpawner : MonoBehaviour
         
         for (int i = 0; i < _count; i++)
         {
-            Debug.Log(i + " object spawned");
+            Debug.Log(i + "object spawned");
             GameObject rainedObject = Instantiate(_templates[Random.Range(0, _templates.Count)]).gameObject;
             rainedObject.transform.position = _randomaizer.CountPosition(_fromPoint, _toPoint);
         }
@@ -44,7 +44,7 @@ public class RainSpawner : MonoBehaviour
 
     }
 
-    public void Finish()
+    public override void Finish()
     {
         _isActive = false;
     }

@@ -4,9 +4,11 @@ namespace Player
 {
     public class Finish : MonoBehaviour
     {
+        [SerializeField] private GameObject _profile; 
         public void Stop()
         {
-            Debug.Log("Game Stopped"); 
+            Time.timeScale = 0;
+            _profile.gameObject.SetActive(true);
         }
     }
 }

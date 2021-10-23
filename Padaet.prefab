@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2614291823825445578}
   - component: {fileID: 5195179072633945999}
   - component: {fileID: -6871197949145994992}
+  - component: {fileID: 7659473327580057906}
   m_Layer: 0
   m_Name: Padaet
   m_TagString: Untagged
@@ -143,5 +144,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f037203b94141dcb6a605ac5bc6c9b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7659473327580057906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441289455206127054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8b259434c59ca4ca38b18a64b87501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

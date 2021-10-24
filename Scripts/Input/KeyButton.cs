@@ -11,7 +11,7 @@ namespace InputHandler
 
         public void Update()
         {
-            if (Input.GetKeyDown(_key))
+            if (Input.GetKeyDown(_key) && Time.timeScale > 0)
             {
                 Inputting?.Invoke(); 
             }

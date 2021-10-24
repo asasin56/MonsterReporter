@@ -9,6 +9,7 @@ namespace Player
     {
         [SerializeField] private Image _previerw; 
         [SerializeField] private float _volts = 5000f;
+        [SerializeField] private float _coldown;
         private float _currentVolts;  
         private ReporterCamera _reporterCamera;
         [SerializeField] private Finish _finish;
@@ -18,7 +19,7 @@ namespace Player
         {
             _reporterCamera = GetComponent<ReporterCamera>();
             _currentVolts = _volts;
-            InvokeRepeating(nameof(UpdateBatery), 1f, 1f);
+            InvokeRepeating(nameof(UpdateBatery), _coldown, _coldown);
             _reporterCamera.Using += () => _isActive = true; 
                 _reporterCamera.StopUsing += () => _isActive = false; 
         }

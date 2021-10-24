@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5195179072633945999}
   - component: {fileID: -6871197949145994992}
   - component: {fileID: 6527736645892110482}
+  - component: {fileID: 3922994375419645722}
   m_Layer: 0
   m_Name: car
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441289455206127054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2461, y: -3.154, z: 0}
-  m_LocalScale: {x: 27.816904, y: -28.577703, z: 7.2546782}
+  m_LocalPosition: {x: 4.1645, y: -1.3919, z: 0}
+  m_LocalScale: {x: 11.480036, y: -11.794018, z: 2.9940057}
   m_Children:
   - {fileID: 3447257909989172947}
   - {fileID: 2908648363164918381}
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.54, y: 0.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -139,7 +140,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.54, y: 0.21}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.54, y: 0.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -147,6 +148,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.54, y: 0.21}
   m_EdgeRadius: 0
+--- !u!114 &3922994375419645722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441289455206127054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8b259434c59ca4ca38b18a64b87501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1849246153011478370
 GameObject:
   m_ObjectHideFlags: 0

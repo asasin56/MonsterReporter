@@ -8,6 +8,7 @@ namespace Player
     {
         [SerializeField] private KeyButton _key;
         [SerializeField] private KeyButton _outKey;
+        [SerializeField] private GameObject _cameraUI; 
         public event Action Using;
         
         private bool _isPlaying;
@@ -19,11 +20,13 @@ namespace Player
             _key.Inputting += () =>
             { 
                 _isPlaying = true;
+                _cameraUI.SetActive(true);
                 Using?.Invoke();
             } ;
             _outKey.Inputting += () =>
             {
                 _isPlaying = false; 
+                _cameraUI.SetActive(false);
                 StopUsing?.Invoke();
             };
         }

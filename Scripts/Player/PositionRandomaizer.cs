@@ -1,12 +1,12 @@
  using UnityEngine;
 
-class PositionRandomaizer : MonoBehaviour
+ public class PositionRandomaizer : MonoBehaviour
 {
     [SerializeField] private float _approximateRadius; 
     [SerializeField] private float height; 
-    public Vector3 CountPosition(float from, float to )
+    public virtual Vector3 CountPosition(Transform from, Transform to )
     {
-        Vector3 position = new Vector3(Random.Range(from, to), height);
+        Vector3 position = new Vector3(Random.Range(from.position.x, to.transform.position.x), height);
         return  position;
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5195179072633945999}
   - component: {fileID: -6871197949145994992}
   - component: {fileID: 7659473327580057906}
+  - component: {fileID: 2037680329238051635}
   m_Layer: 0
   m_Name: Padaet
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -72
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.57254905, g: 0.94509804, b: 0.646672, a: 1}
   m_FlipX: 0
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -146,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f037203b94141dcb6a605ac5bc6c9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _explosion: {fileID: 6865669684455800593, guid: d6cfb8a7ae9db934397ef84df933400e, type: 3}
 --- !u!114 &7659473327580057906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +160,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8b259434c59ca4ca38b18a64b87501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2037680329238051635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441289455206127054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c39f1ac7f8fe7418a84b9003460774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: -10

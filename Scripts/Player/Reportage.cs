@@ -29,7 +29,7 @@ namespace Player
                 _secrets++; 
             _purse.Coins += intersting.Cost;
             _earnedMoney += intersting.Cost;
-            _likes = Mathf.Round(Mathf.Pow(_earnedMoney , 2) + Random.Range(0, Mathf.Sqrt(_earnedMoney)) * Random.Range(0,2)) ; 
+            _likes = Mathf.Round(Mathf.Pow(_earnedMoney , 1.3f) + Random.Range(0, Mathf.Sqrt(_earnedMoney)) * Random.Range(0,2)) ; 
             DisplayMoney();
         }
 

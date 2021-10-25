@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class EarthShaking : Dangerous
 {
+    [SerializeField] private ParticleSystem _shakeParticles; 
     [SerializeField] private Animator _cameraShaking;
     [SerializeField] private string _shakeParameter; 
     [SerializeField] private Rigidbody2D _player;
@@ -14,24 +15,22 @@ public class EarthShaking : Dangerous
     [SerializeField] private Finish _finish;
 
     public override void Init()
-    {
-        Debug.Log("VAR");
+    { 
         _isShake = true;
         Invoke(nameof(Finish),_time );
-    //    _cameraShaking.SetBool(_shakeParameter, true);
+        _cameraShaking.SetBool(_shakeParameter, true);
+        _shakeParticles.Play();
     }
 
     private void FixedUpdate()
     {
-        if (_isShake && _player.velocity.x != 0)
-        {
-            _finish.Stop(); 
-        }
+        if (_isShake && Mathf.Abs(_player.velocity.x) > 8 ) _finish.Stop();
     }
 
     public override void Finish()
     {
-    //    _cameraShaking.SetBool(_shakeParameter, false);
+        _shakeParticles.Stop();
+        _cameraShaking.SetBool(_shakeParameter, false);
         _isShake = false; 
     }
 }
